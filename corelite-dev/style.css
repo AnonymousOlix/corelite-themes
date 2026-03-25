@@ -1,0 +1,180 @@
+/*
+Theme Name: CoreLite Dev
+Description: A minimal classic starter theme with clear hooks and simple templates for custom development.
+Version: 1.0.0
+Author: CoreLite Themes
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: corelite-dev
+Requires at least: 6.0
+Tested up to: 6.9
+Requires PHP: 7.4
+Tags: custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+/* Copyright (C) 2026 CoreLite Themes */
+
+:root {
+	--clt-dev-bg: #f7f9fc;
+	--clt-dev-border: #cdd6e1;
+	--clt-dev-link: #1456c3;
+	--clt-dev-muted: #566273;
+	--clt-dev-surface: #ffffff;
+	--clt-dev-text: #202a35;
+	--clt-dev-width: 78rem;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: var(--clt-dev-bg);
+	color: var(--clt-dev-text);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	line-height: 1.65;
+}
+
+a {
+	color: var(--clt-dev-link);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.screen-reader-text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	word-wrap: normal !important;
+	border: 0;
+}
+
+.screen-reader-text:focus {
+	top: 1rem;
+	left: 1rem;
+	z-index: 100000;
+	width: auto;
+	height: auto;
+	padding: 0.75rem 1rem;
+	margin: 0;
+	clip: auto !important;
+	background: #111111;
+	color: #ffffff;
+}
+
+.site-shell {
+	width: min(100% - 2rem, var(--clt-dev-width));
+	margin: 0 auto;
+}
+
+.site-header,
+.site-main,
+.site-footer {
+	padding: 1.5rem 0;
+}
+
+.site-header__inner,
+.entry {
+	padding: 1.5rem;
+	background: var(--clt-dev-surface);
+	border: 1px solid var(--clt-dev-border);
+	border-radius: 0.4rem;
+}
+
+.site-header__inner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.site-title {
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+.site-title a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.site-description,
+.entry-meta,
+.site-footer {
+	color: var(--clt-dev-muted);
+}
+
+.primary-navigation ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem 1rem;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.primary-navigation a {
+	text-decoration: none;
+}
+
+.entry + .entry {
+	margin-top: 1.5rem;
+}
+
+.entry-title {
+	margin-top: 0;
+}
+
+.site-footer {
+	font-size: 0.95rem;
+}
+
+.footer-widgets {
+	margin-bottom: 1rem;
+}
+
+.widget-title {
+	margin-top: 0;
+}
+
+.entry-taxonomy,
+.page-links,
+.comments-area {
+	margin-top: 1.5rem;
+}
+
+.comment-list {
+	padding-left: 1.5rem;
+}
+
+.wp-caption,
+.gallery-caption,
+.bypostauthor,
+.alignright,
+.alignleft,
+.aligncenter,
+.sticky {
+	max-width: 100%;
+}
+
+.wp-caption-text {
+	color: var(--clt-dev-muted);
+}
+
+@media (max-width: 48rem) {
+	.site-header__inner {
+		align-items: flex-start;
+	}
+}

@@ -1,0 +1,49 @@
+<?php
+/**
+ * Single post template for CoreLite Fast.
+ *
+ * @package CoreLiteFast
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+get_header();
+?>
+
+<?php while ( have_posts() ) : ?>
+	<?php the_post(); ?>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?>>
+		<header class="entry-header">
+			<h1 class="entry-title"><?php the_title(); ?></h1>
+			<?php clt_fast_post_meta(); ?>
+		</header>
+
+		<?php if ( has_post_thumbnail() ) : ?>
+			<div class="post-thumbnail">
+				<?php the_post_thumbnail( 'large' ); ?>
+			</div>
+		<?php endif; ?>
+
+		<div class="entry-content">
+			<?php the_content(); ?>
+			<?php
+			wp_link_pages(
+				array(
+					'before' => '<nav class="page-links" aria-label="' . esc_attr__( 'Post pages', 'corelite-fast' ) . '">',
+					'after'  => '</nav>',
+				)
+			);
+			?>
+		</div>
+
+		<?php the_tags( '<p class="entry-taxonomy">' . esc_html__( 'Tags: ', 'corelite-fast' ), esc_html_x( ', ', 'list item separator', 'corelite-fast' ), '</p>' ); ?>
+	</article>
+
+	<?php the_post_navigation(); ?>
+	<?php comments_template(); ?>
+<?php endwhile; ?>
+
+<?php
+get_footer();
