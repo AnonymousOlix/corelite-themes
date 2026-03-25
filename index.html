@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CoreLite Themes</title>
+	<meta name="description" content="CoreLite Themes is a collection of lightweight WordPress themes.">
+	<style>
+		:root {
+			color-scheme: light;
+			--bg: #f4f6f9;
+			--surface: #ffffff;
+			--text: #1f252d;
+			--muted: #5e6b79;
+			--accent: #1456c3;
+			--border: #d6dde6;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+			color: var(--text);
+			font: 16px/1.7 Arial, sans-serif;
+		}
+
+		.wrapper {
+			width: min(100% - 32px, 1080px);
+			margin: 0 auto;
+			padding: 48px 0 72px;
+		}
+
+		h1 {
+			margin: 0 0 12px;
+			font-size: clamp(2.4rem, 5vw, 4rem);
+			line-height: 1.05;
+		}
+
+		p {
+			margin: 0 0 16px;
+		}
+
+		.meta {
+			color: var(--muted);
+		}
+
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			gap: 18px;
+			margin-top: 32px;
+		}
+
+		.card {
+			padding: 22px;
+			background: var(--surface);
+			border: 1px solid var(--border);
+			border-radius: 18px;
+			text-decoration: none;
+			color: inherit;
+			box-shadow: 0 12px 28px rgba(31, 37, 45, 0.06);
+		}
+
+		.card:hover {
+			transform: translateY(-2px);
+		}
+
+		.card h2 {
+			margin: 0 0 10px;
+			font-size: 1.3rem;
+		}
+
+		.card p {
+			color: var(--muted);
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<h1>CoreLite Themes</h1>
+		<p class="meta">Lightweight WordPress themes designed for clean structure, simple customization, and WordPress.org-ready metadata.</p>
+		<div class="grid">
+			<a class="card" href="./corelite-base/">
+				<h2>CoreLite Base</h2>
+				<p>Classic starter theme foundation.</p>
+			</a>
+			<a class="card" href="./corelite-blog/">
+				<h2>CoreLite Blog</h2>
+				<p>Typography-focused one-column blog theme.</p>
+			</a>
+			<a class="card" href="./corelite-dev/">
+				<h2>CoreLite Dev</h2>
+				<p>Hook-rich starter theme for developers.</p>
+			</a>
+			<a class="card" href="./corelite-fast/">
+				<h2>CoreLite Fast</h2>
+				<p>Performance-oriented classic theme.</p>
+			</a>
+			<a class="card" href="./corelite-blocks/">
+				<h2>CoreLite Blocks</h2>
+				<p>Full site editing theme with starter patterns.</p>
+			</a>
+		</div>
+	</div>
+</body>
+</html>
