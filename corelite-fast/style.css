@@ -1,0 +1,183 @@
+/*
+Theme Name: CoreLite Fast
+Theme URI: https://anonymousolix.github.io/corelite-themes/corelite-fast/
+Description: A lightweight classic theme with system fonts and streamlined styles for fast-loading websites.
+Version: 1.0.0
+Author: CoreLite Themes
+Author URI: https://anonymousolix.github.io/corelite-themes/
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: corelite-fast
+Requires at least: 6.0
+Tested up to: 6.9
+Requires PHP: 7.4
+Tags: blog, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+/* Copyright (C) 2026 CoreLite Themes */
+
+:root {
+	--clt-fast-bg: #ffffff;
+	--clt-fast-border: #d9dde2;
+	--clt-fast-link: #0b57d0;
+	--clt-fast-muted: #5f6b78;
+	--clt-fast-text: #1d252d;
+	--clt-fast-width: 70rem;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: var(--clt-fast-bg);
+	color: var(--clt-fast-text);
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	line-height: 1.65;
+}
+
+a {
+	color: var(--clt-fast-link);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.screen-reader-text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	word-wrap: normal !important;
+	border: 0;
+}
+
+.screen-reader-text:focus {
+	top: 1rem;
+	left: 1rem;
+	z-index: 100000;
+	width: auto;
+	height: auto;
+	padding: 0.75rem 1rem;
+	margin: 0;
+	clip: auto !important;
+	background: #111111;
+	color: #ffffff;
+}
+
+.site-header,
+.site-main,
+.site-footer {
+	width: min(100% - 2rem, var(--clt-fast-width));
+	margin: 0 auto;
+}
+
+.site-header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 1.25rem 0;
+}
+
+.site-title {
+	margin: 0;
+	font-size: 1.4rem;
+}
+
+.site-title a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.site-description,
+.entry-meta,
+.site-footer {
+	color: var(--clt-fast-muted);
+}
+
+.primary-navigation ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem 1rem;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.entry {
+	padding: 1.75rem 0;
+	border-top: 1px solid var(--clt-fast-border);
+}
+
+.entry:first-of-type {
+	border-top: 0;
+}
+
+.entry-title {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+}
+
+.entry-title a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.post-thumbnail {
+	margin-bottom: 1rem;
+}
+
+.site-footer {
+	padding: 1rem 0 2rem;
+	font-size: 0.95rem;
+	border-top: 1px solid var(--clt-fast-border);
+}
+
+.footer-widgets {
+	margin-bottom: 1rem;
+}
+
+.widget-title {
+	margin-top: 0;
+}
+
+.entry-taxonomy,
+.page-links,
+.comments-area {
+	margin-top: 1.5rem;
+}
+
+.comment-list {
+	padding-left: 1.5rem;
+}
+
+.wp-caption,
+.gallery-caption,
+.bypostauthor,
+.alignright,
+.alignleft,
+.aligncenter,
+.sticky {
+	max-width: 100%;
+}
+
+.wp-caption-text {
+	color: var(--clt-fast-muted);
+}
+
+@media (max-width: 40rem) {
+	.site-header {
+		align-items: flex-start;
+	}
+}

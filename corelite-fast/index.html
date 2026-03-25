@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CoreLite Fast</title>
+	<meta name="description" content="CoreLite Fast is a lightweight classic WordPress theme focused on fast-loading websites.">
+	<style>
+		:root {
+			color-scheme: light;
+			--bg: #f5f8fb;
+			--surface: #ffffff;
+			--text: #1d252d;
+			--muted: #5f6b78;
+			--accent: #0b57d0;
+			--border: #d9dde2;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+			color: var(--text);
+			font: 16px/1.7 Arial, sans-serif;
+		}
+
+		.wrapper {
+			width: min(100% - 32px, 960px);
+			margin: 0 auto;
+			padding: 48px 0 64px;
+		}
+
+		.card {
+			padding: 32px;
+			background: var(--surface);
+			border: 1px solid var(--border);
+			border-radius: 18px;
+			box-shadow: 0 18px 40px rgba(11, 87, 208, 0.08);
+		}
+
+		.label {
+			margin: 0 0 12px;
+			color: var(--accent);
+			font-size: 14px;
+			font-weight: 700;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+		}
+
+		h1 {
+			margin: 0 0 12px;
+			font-size: clamp(2rem, 4vw, 3.4rem);
+			line-height: 1.1;
+		}
+
+		p {
+			margin: 0 0 16px;
+		}
+
+		.meta {
+			color: var(--muted);
+		}
+
+		.links {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 12px;
+			margin: 24px 0 32px;
+		}
+
+		.links a {
+			display: inline-block;
+			padding: 12px 18px;
+			border-radius: 999px;
+			text-decoration: none;
+		}
+
+		.links a:first-child {
+			background: var(--accent);
+			color: #ffffff;
+		}
+
+		.links a:last-child {
+			border: 1px solid var(--border);
+			color: var(--text);
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			border: 1px solid var(--border);
+			border-radius: 14px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="card">
+			<p class="label">CoreLite Themes</p>
+			<h1>CoreLite Fast</h1>
+			<p>A lightweight classic theme with system fonts and streamlined styles for fast-loading websites.</p>
+			<p class="meta">Classic WordPress theme. Version 1.0.0.</p>
+			<div class="links">
+				<a href="https://github.com/anonymousolix/corelite-themes/tree/main/corelite-fast">View Source</a>
+				<a href="https://anonymousolix.github.io/corelite-themes/">All Themes</a>
+			</div>
+			<img src="screenshot.png" alt="CoreLite Fast theme preview">
+		</div>
+	</div>
+</body>
+</html>
